@@ -5,6 +5,7 @@
 //  Created by Kostya on 06.10.2017.
 //  Copyright © 2017 SKS. All rights reserved.
 //
+//task~1
 
 @import CoreLocation;
 @import MapKit;
