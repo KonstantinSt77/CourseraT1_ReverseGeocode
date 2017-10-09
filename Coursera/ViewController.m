@@ -8,6 +8,7 @@
 
 @import CoreLocation;
 @import MapKit;
+
 #import "ViewController.h"
 
 @interface ViewController ()<MKMapViewDelegate>
@@ -16,12 +17,12 @@
 @property (strong,nonatomic) CLGeocoder *geocoder;
 @property (weak, nonatomic) IBOutlet UIImageView *pinIcon;
 @property (assign,nonatomic) BOOL lookingUp;
-
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.geocoder = [[CLGeocoder alloc]init];
     self.geocodeLabel.text = nil;
@@ -49,7 +50,6 @@
    
         [self startReverseGeocodeLocation:loc];
     }
-    
 }
 
 - (void)startReverseGeocodeLocation:(CLLocation *)loction
@@ -82,6 +82,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
