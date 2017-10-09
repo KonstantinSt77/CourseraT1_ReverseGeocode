@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wg7-0F-riv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="629"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uK5-DE-GF0"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AM-Gc-E8L">
+                                <rect key="frame" x="0.0" y="637" width="366" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapPin" translatesAutoresizingMaskIntoConstraints="NO" id="XaC-65-Xxw">
+                                <rect key="frame" x="162" y="290" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BI3-NE-Q6T"/>
+                                    <constraint firstAttribute="height" constant="50" id="OID-41-4rp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1AM-Gc-E8L" secondAttribute="bottom" constant="9" id="196-EG-Vxi"/>
+                            <constraint firstItem="1AM-Gc-E8L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BJM-RK-Lti"/>
+                            <constraint firstItem="XaC-65-Xxw" firstAttribute="centerX" secondItem="Wg7-0F-riv" secondAttribute="centerX" id="Bkx-Z3-8ds"/>
+                            <constraint firstItem="Wg7-0F-riv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="E59-Ux-5vQ"/>
+                            <constraint firstItem="XaC-65-Xxw" firstAttribute="centerY" secondItem="Wg7-0F-riv" secondAttribute="centerY" id="Szh-fR-Bnh"/>
+                            <constraint firstItem="Wg7-0F-riv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="agw-U1-9V0"/>
+                            <constraint firstItem="Wg7-0F-riv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d4z-uH-SWT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1AM-Gc-E8L" secondAttribute="trailing" constant="9" id="k0S-VM-fyc"/>
+                            <constraint firstItem="1AM-Gc-E8L" firstAttribute="top" secondItem="Wg7-0F-riv" secondAttribute="bottom" constant="8" symbolic="YES" id="xqj-aD-pzT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="geocodeLabel" destination="1AM-Gc-E8L" id="vgs-yK-L0a"/>
+                        <outlet property="mapKitView" destination="Wg7-0F-riv" id="WiN-np-SSP"/>
+                        <outlet property="pinIcon" destination="XaC-65-Xxw" id="myg-sY-Spy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mapPin" width="96" height="96"/>
+    </resources>
+</document>
